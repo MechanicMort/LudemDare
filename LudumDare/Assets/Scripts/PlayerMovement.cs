@@ -4,29 +4,58 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //private float xMove;
-    //private float yMove;
+    private float xMove;
+    private float yMove;
     public float speed;
-       
-    private Rigidbody2D rb2D;
-    
+
+
+    public bool isFiring;
+    public Camera mainCam;
+    public Rigidbody2D rb;
+
+   
+
     void Start()
     {
 
-        rb2D = GetComponent<Rigidbody2D>();
+        isFiring = true;
+        mainCam = FindObjectOfType<Camera>();
+        rb = GetComponent<Rigidbody2D>();
     }
-
+    
     void Update()
     {
-        float xMove = Input.GetAxisRaw("Horizontal");
-        float yMove = Input.GetAxisRaw("Vertical");
+        xMove = Input.GetAxisRaw("Horizontal");
+        yMove = Input.GetAxisRaw("Vertical");
+        
+        Vector2 MovementDirection = new Vector2(xMove, yMove);
 
-        Vector2 movement = new Vector2(xMove, yMove);
-        rb2D.velocity = movement * speed;
-        
-        
-        //this.transform.Translate(new Vector3((xMove * speed * Time.deltaTime), (yMove * speed * Time.deltaTime)));
+        rb.velocity = MovementDirection * speed * Time.deltaTime;
+
+        rotateAround();
+
     }
-}
 
-    
+    void rotateAround()
+    {
+        Vector3 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector3 lookAt = mouseScreenPosition;
+
+        float AngleRad = Mathf.Atan2(lookAt.y - this.transform.position.y, lookAt.x - this.transform.position.x);
+
+        float AngleDeg = (180 / Mathf.PI) * AngleRad;
+
+        this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg - 90);
+    }
+
+        IEnumerator waitFire()
+    {
+
+        //FireMissiles();
+        isFiring = false;
+        yield return new WaitForSeconds(1.5f);
+        isFiring = true;
+    }
+
+}
