@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     public BaseAttack[] myAttacks = new BaseAttack[4];
 
-    public Image frame1;
+    public Image[] frames =  new Image[4];
+ 
 
     void Start()
     {
@@ -24,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
         isFiring = true;
         mainCam = FindObjectOfType<Camera>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void SetFrames()
+    {
+        for (int i = 0; i < myAttacks.Length; i++)
+        {
+            frames[i].sprite = myAttacks[i].UIElement;
+        }
+        
     }
     
     void Update()
