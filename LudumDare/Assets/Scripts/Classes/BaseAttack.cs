@@ -12,6 +12,4 @@ public class BaseAttack : MonoBehaviour {
 
     public GameObject myProjectile;
     public Sprite UIElement;
-
 }
-                        
