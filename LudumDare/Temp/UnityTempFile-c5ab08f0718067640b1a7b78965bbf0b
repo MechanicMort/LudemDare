@@ -2,7 +2,7 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp/UnityEditor.StandardEvents.dll
+-out:Temp/Unity.PackageManagerUI.Editor.dll
 -nostdlib
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
@@ -94,11 +94,11 @@
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/Facebook/UnityEditor.Facebook.Extensions.dll"
--r:C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
--r:C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
--r:C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
--r:C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
--r:C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
+-r:C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
+-r:C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
+-r:C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
+-r:C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
+-r:C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
 -r:"C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll"
@@ -209,5 +209,48 @@
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
-C:/Users/bh37vo/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/Editor/Importer.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/AssemblyInfo.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/External/SemVersion.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/External/SemVersionExtension.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Common/ApplicationUtil.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Common/OperationSignal.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Common/Resources.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Common/ThreadedDelay.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/IAddOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/IBaseOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/IListOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/IOperationFactory.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/IRemoveOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Interfaces/ISearchOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/OperationFactory.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/Package.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageCollection.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageFilter.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageGroupOrigins.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageInfo.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageInfoListExtensions.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageListExtensions.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageOrigin.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageState.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Packages/PackageTag.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmAddOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmBaseOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmListOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmOperationFactory.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmRemoveOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/Services/Upm/UpmSearchOperation.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Common/Alert.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Common/LoadingSpinner.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Common/PopupField.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Common/UIUtils.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Common/VersionItem.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/Interfaces/IPackageManagerExtension.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageDetails.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageGroup.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageItem.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageList.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageManagerExtensions.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageManagerWindow.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackageSearchFilterTabs.cs
+C:/Users/bh37vr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.package-manager-ui@1.9.11/Editor/Sources/UI/PackagesLoading.cs
 -lib:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api"
