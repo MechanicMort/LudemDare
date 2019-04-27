@@ -2,53 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovemen : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private float xMove;
     private float yMove;
     public float speed;
 
-    bool isJumping;
-    Rigidbody rb;
 
-    void Awake()
-    {
-        isJumping = true;
-    }
+    public bool isFiring;
+    public Camera mainCam;
+    public Rigidbody2D rb;
+
+   
 
     void Start()
     {
-        
-        rb = GetComponent<Rigidbody>();
+
+        isFiring = true;
+        mainCam = FindObjectOfType<Camera>();
+        rb = GetComponent<Rigidbody2D>();
     }
     
     void Update()
     {
         xMove = Input.GetAxisRaw("Horizontal");
         yMove = Input.GetAxisRaw("Vertical");
+        
+        Vector2 MovementDirection = new Vector2(xMove, yMove);
 
-        this.transform.Translate(new Vector3((xMove * speed * Time.deltaTime), (yMove * speed * Time.deltaTime), 0.0f));
+        rb.velocity = MovementDirection * speed * Time.deltaTime;
 
-        //Jump();
+        rotateAround();
+
     }
 
-    /*
-    void Jump()
+    void rotateAround()
     {
-        if (Input.GetKeyDown("space") && isJumping == true || (Input.GetKeyDown("w") && isJumping == true))
-        {
-            isJumping = false;
-            rb.AddForce(new Vector3(0, 20f, 0), ForceMode.Impulse);            
-        }
+        Vector3 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        Vector3 lookAt = mouseScreenPosition;
+
+        float AngleRad = Mathf.Atan2(lookAt.y - this.transform.position.y, lookAt.x - this.transform.position.x);
+
+        float AngleDeg = (180 / Mathf.PI) * AngleRad;
+
+        this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg - 90);
     }
 
-    void OnCollisionEnter(Collision collision)
+        IEnumerator waitFire()
     {
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            isJumping = true;
-        }
+
+        //FireMissiles();
+        isFiring = false;
+        yield return new WaitForSeconds(1.5f);
+        isFiring = true;
     }
-    */
+
 }

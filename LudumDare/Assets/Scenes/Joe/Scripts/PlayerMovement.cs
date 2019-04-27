@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovemen : MonoBehaviour
 {
 
     //control player movement speed
@@ -14,18 +14,13 @@ public class PlayerMovement : MonoBehaviour
     //control player direction and movement
     private Vector3 moveInput;
     private Vector3 moveVelocity;
-
+    public bool playWithController;
 
     //access camera for raycast
     private Camera mainCam;
 
     //bool to check if player wishes to shoot
-    public bool isFiring = true;
-
-
-    //bool to switch controls to a ps4 controller
-    public bool playWithController;
-
+    public bool isFiring;
 
     //space where bullents will spawn
     public Transform[] turretLocation;
