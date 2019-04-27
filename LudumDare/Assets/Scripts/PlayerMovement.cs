@@ -5,51 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float xMove;
-    private float yMove;
+    //private float xMove;
+    //private float yMove;
     public float speed;
-
-    bool isJumping;
-    Rigidbody rb;
-
-    void Awake()
-    {
-        isJumping = true;
-    }
-
+       
+    private Rigidbody2D rb2D;
+    
     void Start()
     {
-        
-        rb = GetComponent<Rigidbody>();
+
+        rb2D = GetComponent<Rigidbody2D>();
     }
-    
+
     void Update()
     {
-        xMove = Input.GetAxisRaw("Horizontal");
-        yMove = Input.GetAxisRaw("Vertical");
+        float xMove = Input.GetAxisRaw("Horizontal");
+        float yMove = Input.GetAxisRaw("Vertical");
 
-        this.transform.Translate(new Vector3((xMove * speed * Time.deltaTime), (yMove * speed * Time.deltaTime), 0.0f));
-
-        //Jump();
+        Vector2 movement = new Vector2(xMove, yMove);
+        rb2D.velocity = movement * speed;
+        
+        
+        //this.transform.Translate(new Vector3((xMove * speed * Time.deltaTime), (yMove * speed * Time.deltaTime)));
     }
-
-    /*
-    void Jump()
-    {
-        if (Input.GetKeyDown("space") && isJumping == true || (Input.GetKeyDown("w") && isJumping == true))
-        {
-            isJumping = false;
-            rb.AddForce(new Vector3(0, 20f, 0), ForceMode.Impulse);            
-        }
-
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            isJumping = true;
-        }
-    }
-    */
 }
+
+    
