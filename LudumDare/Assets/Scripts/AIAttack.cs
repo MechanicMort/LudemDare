@@ -16,11 +16,6 @@ public class AIAttack : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        print("ge");
-        if (collider.tag == "Player")
-        {
-            print("damage");
-            collider.SendMessage("Damage", 5);
-        }
+        
     }
 }
