@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovemen : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     //private float xMove;
     //private float yMove;
