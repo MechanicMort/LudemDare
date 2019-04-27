@@ -8477,57 +8477,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4702472038798950, guid: 398956bfe6917744f934feec663755aa, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.7711655
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702472038798950, guid: 398956bfe6917744f934feec663755aa, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.8047158
-      objectReference: {fileID: 0}
-    - target: {fileID: 212375906461572852, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702472038798950, guid: 398956bfe6917744f934feec663755aa, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.32435
-      objectReference: {fileID: 0}
     - target: {fileID: 114006390535549142, guid: 398956bfe6917744f934feec663755aa,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 1917823884}
-    - target: {fileID: 114374574620737878, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: traversableTags
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374574620737878, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: graphMask.value
-      value: -2
-      objectReference: {fileID: 0}
     - target: {fileID: 114615778250688496, guid: 398956bfe6917744f934feec663755aa,
         type: 2}
-      propertyPath: slowWhenNotFacingTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114615778250688496, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: slowdownDistance
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114615778250688496, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: endReachedDistance
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114615778250688496, guid: 398956bfe6917744f934feec663755aa,
-        type: 2}
-      propertyPath: pickNextWaypointDist
-      value: 0.1
+      propertyPath: whenCloseToDestination
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398956bfe6917744f934feec663755aa, type: 2}
@@ -12255,9 +12213,10 @@ GameObject:
   - component: {fileID: 1034781481}
   - component: {fileID: 1034781483}
   - component: {fileID: 1034781482}
+  - component: {fileID: 1034781484}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12317,6 +12276,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1034781480}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1034781484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034781480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0331574e04cf4499dcc27c3ce7fd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fHealth: 0
 --- !u!1 &1039906932
 GameObject:
   m_ObjectHideFlags: 0
@@ -21993,6 +21964,12 @@ MonoBehaviour:
   isFiring: 0
   mainCam: {fileID: 0}
   rb: {fileID: 0}
+  myAttacks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  frame1: {fileID: 0}
 --- !u!50 &1917823882
 Rigidbody2D:
   serializedVersion: 4

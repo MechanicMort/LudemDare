@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BloodRain : MonoBehaviour {
+public class BloodRain : BaseAttack {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public BloodRain ()
+    {
+        AttackName = "Blood Rain";
+        Damage = 5;
+        Cost = 1;
+    }
 }

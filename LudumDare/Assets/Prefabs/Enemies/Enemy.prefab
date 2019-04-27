@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114615778250688496}
   - component: {fileID: 114006390535549142}
   - component: {fileID: 114291286563629392}
+  - component: {fileID: 61223895453909892}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -39,13 +40,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531730515581380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41, y: 3.34, z: 0.007605762}
-  m_LocalScale: {x: 3.585, y: 3.983, z: 1}
+  m_LocalPosition: {x: -1.218, y: -0.671, z: 0.0076058}
+  m_LocalScale: {x: 0.7711655, y: 0.8047158, z: 0.32435}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61166826555692166
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1531730515581380}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0269579}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.3739158}
+  m_EdgeRadius: 0
+--- !u!61 &61223895453909892
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 4580424152794386, guid: 1368d7c01bc9e90458fd33582c27f24d, type: 2}
+  target: {fileID: 0}
 --- !u!114 &114291286563629392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +146,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: -2
 --- !u!114 &114615778250688496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,9 +175,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: 10
   rotationSpeed: 360
-  slowdownDistance: 0
-  pickNextWaypointDist: 4
-  endReachedDistance: 0
+  slowdownDistance: 0.1
+  pickNextWaypointDist: 0.1
+  endReachedDistance: 0.1
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
@@ -190,7 +216,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 336080166fed7ad4bb539340b0c3c212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

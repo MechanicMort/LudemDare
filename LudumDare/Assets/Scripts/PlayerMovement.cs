@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         isFiring = true;
         mainCam = FindObjectOfType<Camera>();
         rb = GetComponent<Rigidbody2D>();
+        SetFrames();
     }
 
     void SetFrames()
