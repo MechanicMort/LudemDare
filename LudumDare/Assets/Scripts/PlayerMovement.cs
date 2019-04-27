@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCam;
     public Rigidbody2D rb;
 
-   
+    public BaseAttack[] myAttacks = new BaseAttack[4];
+
+    public Image frame1;
 
     void Start()
     {
